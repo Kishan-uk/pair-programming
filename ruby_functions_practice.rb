@@ -4,22 +4,22 @@ end
 
 
 def add(first, second)
-  return 3
+  return first+second
 end
 
 
 def subtract(first, second)
-  return 5
+  return first-second
 end
 
 
 def multiply(f, s)
-  return 8
+  return f*s
 end
 
 
 def divide(first_number, second_number)
-  return 5
+  return first_number/second_number
 end
 
 def length_of_string(test_string)
@@ -32,10 +32,38 @@ end
 
 
 def add_string_as_number(x, y)
-  add_result = x.to_i + y.to_i
-  return 3
+  return add_result = x.to_i + y.to_i
 end
 
-def number_to_full_month_name (first_month_string, third_month_string, ninth_month_string)
-  return number_to_full_month_name = 1, 3, 9
+def number_to_full_month_name(month)
+  if month == 1
+    return "January"
+  elsif month == 3
+    return "March"
+  elsif month == 9
+    return "September"
+  end
+end
+
+def number_to_short_month_name(month)
+  case month
+  when 1
+      return "Jan"
+    when 3
+      return "Mar"
+    when 9
+      return "Sep"
+  end
+end
+
+def volume_of_cube(n)
+    return volume_result = n**3
+end
+
+def volume_of_sphere(radius)
+  return volume_result = (4.0/3.0 * Math::PI * radius**3).round(1)
+end
+
+def fahrenheit_to_celsius(fahrenheit)
+  return temp_result = ((fahrenheit-32)/1.8).round
 end
